@@ -1,10 +1,10 @@
 package com.forum.common.template;
 
-import com.forum.common.template.freemarker.FreemarkerUtil;
+import com.forum.common.template.freemarker.FreemarkerUtil;import com.forum.common.template.freemarker.FreemarkerUtil;
 
 /**
  * @Copyright Copyright (c) 2017 版权归作者及其公司所有
- * @author li.ming
+ * @author yuangenping
  * @date 2017-12-13
  * @version V1.0.0
  */

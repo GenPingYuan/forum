@@ -1,6 +1,6 @@
 package com.forum.common.xml.dom4j;
 
-import com.forum.common.xml.Attribute;
+import com.forum.common.xml.Attribute;import com.forum.common.xml.Attribute;
 
 import javax.xml.namespace.QName;
 

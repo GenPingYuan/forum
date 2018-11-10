@@ -3,7 +3,7 @@ package com.forum.common.xml.model;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.forum.common.json.util.JsonUtil;
+import com.forum.common.json.util.JsonUtil;import com.forum.common.json.util.JsonUtil;
 
 /**
  * @Copyright Copyright (c) 2018 版权归作者及其公司所有

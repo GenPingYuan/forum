@@ -14,10 +14,22 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>com.forum</groupId>
-			<artifactId>common</artifactId>
-			<version>1.0.0.0</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
 		</dependency>
+
+        <dependency>
+            <groupId>com.forum</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.forum</groupId>
+            <artifactId>jdbc</artifactId>
+            <version>1.0.0.0</version>
+        </dependency>
     </dependencies>
 
 	<build>
@@ -25,7 +37,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-
+				<configuration>
+					<fork>true</fork>
+				</configuration>
 				<executions>
 					<execution>
 						<configuration>

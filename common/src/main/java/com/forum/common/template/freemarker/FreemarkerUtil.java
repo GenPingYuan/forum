@@ -8,7 +8,7 @@ import freemarker.template.Configuration;
 import freemarker.template.Template;
 /**
  * @Copyright Copyright (c) 2017 版权归作者及其公司所有
- * @author li.ming
+ * @author yuangenping
  * @date 2017-12-13
  * @version V1.0.0
  */

@@ -1,12 +1,12 @@
-package com.forum.iweb;
+package com.forum.jdbc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class IwebApplication {
+public class JdbcApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(IwebApplication.class, args);
+		SpringApplication.run(JdbcApplication.class, args);
 	}
 }

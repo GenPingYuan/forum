@@ -10,7 +10,7 @@ import org.apache.commons.io.FileUtils;
 /**
  * 文件处理工具类
  * @Copyright Copyright (c) 2017 版权归作者及其公司所有
- * @author li.ming
+ * @author yuangenping
  * @date 2017-12-12
  * @version V1.0.0
  */

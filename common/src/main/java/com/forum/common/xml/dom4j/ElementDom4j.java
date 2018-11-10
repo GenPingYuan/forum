@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.forum.common.xml.Element;
-import org.springframework.util.Assert;
+import com.forum.common.xml.Attribute;import com.forum.common.xml.model.ElementMap;import org.springframework.util.Assert;
 
 import com.forum.common.xml.Attribute;
 import com.forum.common.xml.Element;

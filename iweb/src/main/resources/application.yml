@@ -1,8 +1,47 @@
 server:
   port: 9002
-
+  tomcat:
+    uri-encoding: utf-8
+  session:
+    #需要注意单位是秒
+    timeout: 120
+    tracking-modes: cookie
+logging:
+   level:
+      root: INFO
+      com:
+         spring: DEBUG
+#   path: ./logs
+   pattern:
+      console: "%d{yyyy-MM-dd HH:mm:ss} %5p [%t] [%F:%L] - %m%n"
 #
 spring:
   application:
     name: iweb
+  resources:
+    chain:
+      enabled: true
+      # 这个开发配置为false，避免改了静态资源还要重启服务器
+      cache: false
+      #gzipped: false
+      strategy:
+        content:
+          enabled: true
+          paths: /**
+        fixed:
+          enabled: true
+          paths: /**
+          version: 1.0.0
 
+  jackson:
+      time-zone: GMT+8
+      date-format: yyyy-MM-dd HH:mm:ss
+
+  profiles:
+      active: dev
+  http:
+    multipart:
+      max-file-size: 30Mb
+      max-request-size: 30Mb
+  main:
+    allow-bean-definition-overriding: true

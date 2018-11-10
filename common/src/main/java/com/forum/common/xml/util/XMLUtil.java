@@ -15,7 +15,7 @@ import org.xml.sax.InputSource;
 /**
  * 封装了XML转换成object，object转换成XML的代码
  * @Copyright Copyright (c) 2017 版权归作者及其公司所有
- * @author li.ming
+ * @author yuangenping
  * @date 2017-12-12
  * @version V1.0.0
  */
@@ -54,7 +54,7 @@ public class XMLUtil{
 
 	/**
 	 * 将xml字符串转成对象
-	 * @author li.ming
+	 * @author yuangenping
 	 * @date 2017-11-23
 	 * @version V1.0.0
 	 * @param clazz
@@ -84,7 +84,7 @@ public class XMLUtil{
 	
 	/**
 	 * 将XML转换成w3c Element对象
-	 * @author li.ming
+	 * @author yuangenping
 	 * @date 2017-12-12
 	 * @version V1.0.0
 	 * @param xml

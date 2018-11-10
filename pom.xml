@@ -10,8 +10,11 @@
     <packaging>pom</packaging>
 
     <modules>
+
         <module>common</module>
         <module>iweb</module>
+        <module>jdbc</module>
+        <module>entity</module>
     </modules>
 
 

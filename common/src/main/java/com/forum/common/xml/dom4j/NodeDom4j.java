@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import org.dom4j.XPath;
+import com.forum.common.xml.Node;import org.dom4j.XPath;
 
 import com.forum.common.xml.Document;
 import com.forum.common.xml.Element;
