@@ -1,12 +1,11 @@
-import styles from './index.css';
+import BasicLayout from './BasicLayout'
 
-function BasicLayout(props) {
+function Index(props) {
   return (
-    <div className={styles.normal}>
-      <h1 className={styles.title}>Yay! Welcome to umi!</h1>
+    <BasicLayout>
       { props.children }
-    </div>
+    </BasicLayout>
   );
 }
 
-export default BasicLayout;
+export default Index;
