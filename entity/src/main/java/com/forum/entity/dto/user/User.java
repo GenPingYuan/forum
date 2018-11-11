@@ -1,30 +1,21 @@
-package com.forum.entity.dto;
+package com.forum.entity.dto.user;
 
+import com.forum.entity.dto.BaseEntity;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
-@Component
 @Entity
-public class User {
+public class User extends BaseEntity implements Serializable{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
 
+    private static final long serialVersionUID = 5346834195630711994L;
     @Column
     private String userName;
 
     @Column
     private String password;
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
 
     public String getUserName() {
         return userName;

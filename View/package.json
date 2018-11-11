@@ -25,5 +25,14 @@
   },
   "engines": {
     "node": ">=8.0.0"
+  },
+  "proxy": {
+    "/server": {
+      "target": "localhost:9002",
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/server": ""
+      }
+    }
   }
 }

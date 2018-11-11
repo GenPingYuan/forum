@@ -1,10 +1,8 @@
-package com.forum.jdbc.Repository;
+package com.forum.jdbc.Repository.User;
 
 
-import com.forum.entity.dto.User;
+import com.forum.entity.dto.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 
