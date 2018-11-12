@@ -30,11 +30,13 @@ public class MenuController {
     @Autowired
     private MenuCatalogRepository menuCatalogRepository;
 
-    /**
-     * 有过滤条件的列表
-     * @return
-     * @throws Exception
-     */
+    /*
+    * @Description: 获取菜单目录列表
+    * @Author: https://github.com/GenPingYuan
+    * @Date: 2018/11/12 20:48
+    * @Param: []
+    * @Return: java.lang.String
+    */
     @ResponseBody
     @RequestMapping("/filterList")
     public String filterListMenu() throws Exception {

@@ -1,16 +1,19 @@
-import React,{PureComponent} from 'react'
+import React, { PureComponent } from 'react'
 
 
-class Head extends PureComponent{
-    constructor(props){
+class Head extends PureComponent {
+    constructor(props) {
         super(props);
+        this.state = {
+            menuList: this.props.menuList
+        }
     }
 
-    render(){
-        return(
-        <div>
-            
-        </div>)
+    render() {
+        return (
+            <div>
+
+            </div>)
     }
 
 }

@@ -1,4 +1,15 @@
 
+import { resolve } from 'path';
+var AUTOPREFIXER_BROWSERS = [
+  'Android 2.3',
+  'Android >= 4',
+  'Chrome >= 35',
+  'Firefox >= 31',
+  'Explorer >= 9',
+  'iOS >= 7',
+  'Opera >= 12',
+  'Safari >= 7.1',
+]
 // ref: https://umijs.org/config/
 export default {
   plugins: [
@@ -14,7 +25,43 @@ export default {
       routes: {
         exclude: [],
       },
-      hardSource: true,
-    }],
+      hardSource: true
+    }]
   ],
+  proxy: {
+    '/api/': {
+      target: 'http://localhost:9002',
+      changeOrigin: true,
+      pathRewrite: { '^/api': '' },
+    },
+  },
+  alias: {
+    api: resolve(__dirname, './src/services/'),
+    components: resolve(__dirname, './src/components'),
+    config: resolve(__dirname, './src/utils/config'),
+    models: resolve(__dirname, './src/models'),
+    routes: resolve(__dirname, './src/routes'),
+    services: resolve(__dirname, './src/services'),
+    themes: resolve(__dirname, './src/themes'),
+    utils: resolve(__dirname, './src/utils'),
+  },
+
+  chainWebpack(config, { webpack }) {
+        config.module.rule('css')
+        .test(/\.css$/)
+        .use('style-loader')
+          .loader('css-loader')
+            .options({
+              importLoaders: 1
+            })
+  },
+  // disableCSSModules: true,
+
+  extraPostCSSPlugins: [
+    require('postcss-import')(),
+    require('precss')(),
+    require('autoprefixer')({
+      browsers: AUTOPREFIXER_BROWSERS
+    })
+  ]
 }
