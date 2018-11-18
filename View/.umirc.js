@@ -34,6 +34,11 @@ export default {
       changeOrigin: true,
       pathRewrite: { '^/api': '' },
     },
+    '/static/': {
+      target: 'http://localhost:9002',
+      changeOrigin: true,
+      pathRewrite: { '^/static': '' },
+    }
   },
   alias: {
     api: resolve(__dirname, './src/services/'),
@@ -44,22 +49,42 @@ export default {
     services: resolve(__dirname, './src/services'),
     themes: resolve(__dirname, './src/themes'),
     utils: resolve(__dirname, './src/utils'),
+    resource: resolve(__dirname, './src/assets'),
   },
 
   chainWebpack(config, { webpack }) {
-        config.module.rule('css')
-        .test(/\.css$/)
-        .use('style-loader')
-          .loader('css-loader')
-            .options({
-              importLoaders: 1
-            })
+        config.module
+        .rule('css')
+          .test("/\.css$/")
+          .use('css')
+            .loader('css-loader')
+              .options({
+                importLoaders: 1
+              })
+            .loader('postcss-loader')
+              .options({ident: 'postcss'})
+            .loader('px2rem2-loader')
+              .options({remUnit: 75, remPrecision: 8})
+              .end()
+          .test("/\.sass$/")
+          .use("sass")
+            .loader('style-loader')
+            .loader('css-loader')
+            .loader('sass-loader')
+            .loader('px2rem2-loader')
+              .options({remUnit: 75, remPrecision: 8})
+              .end();
+        
+        // config.module.rule('css')
+        // .test(/\.sass$/)
+        // .use('style-loader')
+        //   .loader('sass-loader');
   },
   // disableCSSModules: true,
 
   extraPostCSSPlugins: [
     require('postcss-import')(),
-    require('precss')(),
+    // require('precss')(),
     require('autoprefixer')({
       browsers: AUTOPREFIXER_BROWSERS
     })

@@ -32,4 +32,10 @@ public class SysController {
         userRepository.save(user);
         return "Hello World";
     }
+
+    @ResponseBody
+    @GetMapping("/getLogo")
+    public String getLogo(){
+        return "sys/logo.png";
+    }
 }
