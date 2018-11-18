@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react';
 import Head from './Head';
 import { connect } from 'dva';
-import styles from './style/style.sass'
 
-class Index extends PureComponent {
+
+class Index extends PureComponent  {
     constructor(props) {
         super(props)
         this.state = {
@@ -12,7 +12,7 @@ class Index extends PureComponent {
     }
 
     componentWillMount(){
-        console.log(styles);
+        // console.log(styles);
         // console.log(this.props);
         this.props.dispatch({type: "head/listQuerMenu"});
         this.setState({

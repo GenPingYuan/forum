@@ -1,0 +1,27 @@
+@import 'themes/global.sass'
+
+.nav
+    background-color: $theme-color
+    height: 3.125rem
+    display: grid
+    grid-template-columns: 5% auto 10%
+    padding: $public-pad-v $public-pad-hor
+    >div
+        flex: 1
+        height: 100%
+        display: flex
+        justify-content: flex-start
+        align-self: center
+//导航条菜单
+.navMenu
+    display: flex
+    justify-content: center
+    align-items: center
+    >div
+        display: flex
+        justify-content: flex-start
+        align-items: center
+
+.navMenuItem
+    &:hover
+        background-color: rgb(255,255,255)

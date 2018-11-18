@@ -9,8 +9,8 @@ class BasicLayout extends PureComponent{
     render(){
         return(
             <div>
-                <div><Head/></div>
-                <div>{this.props.children}</div>
+                <Head/>
+                {/* <CopyRight/> */}
             </div>
         )
     }
